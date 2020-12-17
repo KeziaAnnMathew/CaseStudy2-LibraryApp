@@ -1,5 +1,5 @@
 const mongoose =require("mongoose");
-mongoose.connect('mongodb://localhost:27017/atheneaum');
+mongoose.connect('mongodb+srv://userone:userone@libraryfiles.ryw28.mongodb.net/atheneaum?retryWrites=true&w=majority');
 const Schema= mongoose.Schema;
 
 
