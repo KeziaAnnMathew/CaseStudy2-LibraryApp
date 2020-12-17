@@ -123,7 +123,7 @@ function router(nav){
         }
         Authordata.findOneAndUpdate({_id:id}, item, {returnOriginal:false})
         .then(()=>{
-            res.redirect('/authors/editauthor')
+            res.redirect('/authors')
         })
     });
     authorsRouter.get('/deleteauthor',function(req,res){
@@ -140,7 +140,7 @@ function router(nav){
         const id=req.params.id;
         Authordata.deleteOne({_id : id})
         .then(()=>{
-            res.redirect('/authors/deleteauthor');
+            res.redirect('/authors');
             });
     });
     authorsRouter.get('/:id',function(req,res){

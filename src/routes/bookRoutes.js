@@ -124,7 +124,7 @@ function router(nav){
         }
         Bookdata.findOneAndUpdate({_id:id}, item, {returnOriginal:false})
         .then(()=>{
-            res.redirect('/books/editbook')
+            res.redirect('/books')
         })
     });
     booksrouter.get('/deletebook',function(req,res){
@@ -141,7 +141,7 @@ function router(nav){
         const id=req.params.id;
         Bookdata.deleteOne({_id : id})
         .then(()=>{
-            res.redirect('/books/deletebook');
+            res.redirect('/books');
             });
     });
     booksrouter.get('/:id',function(req,res){
