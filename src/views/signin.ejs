@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@500;800&display=swap" rel="stylesheet"> 
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="/css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <%for(i=nav.length-2;i<nav.length-1;i++){%>
+        <li>
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+        <%}%>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Log In
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <!-- <div class="col-md-5">
+        <div class="well well-lg">  -->
+          <div class="row">
+            <div class="col-sm-12">
+              
+			
+            </div>
+          <!-- </div>
+        </div> -->
+      </div>
+    </div> 
+  </div><!-- /cont -->
+</div>
+
+
+<div class="container">
+  <div class="row row2">
+    <div class="col-md-4"></div>
+    <div class="col-md-6"> 
+      
+      <div class="panel newpanel">
+        <div class="panel-body">
+          
+          
+          
+          <!--/stories-->
+          <div class="row">    
+            <br>
+            <%if(success!=''){%>
+          <div class="alert alert-danger">
+              <%= success%>
+          </div>
+            <%}%>
+            <div class="col-md-12 col-sm-5 mymar">
+                <form action="/Signin/validateuser" method='POST' id="form-main">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Username/Email" required >
+                      </div>
+                      <div class="form-group inner-addon right-addon">
+                        <i class="fa fa-eye" onClick="showpsw(this)"></i>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password"  required/>
+                      </div>
+                    <br>
+                    <div class="text-center"><button type="submit" class="btn btn-success butn">Log In</button></div><br>
+                    <div class="text-center"><p>New User?<a href="/Signup"> Create an Account</a></p></div>
+                </form>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+	</body>
+</html>

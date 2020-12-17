@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@500;800&display=swap" rel="stylesheet"> 
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="/css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/index" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <%for(i=0;i<nav.length-3;i++){if(i!=2 && i!=3 && i!=4 && i!=6){%>
+        <li>
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+        <%}}%>
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        <%for(i=nav.length-1;i<nav.length;i++){%>
+        <li>
+           <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+        <%}%>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1><%=heading%>
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <!-- <div class="col-md-5">
+        <div class="well well-lg">  -->
+          <div class="row">
+            <div class="col-sm-12">
+              
+			
+            </div>
+          <!-- </div>
+        </div> -->
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row row1">
+      <div class="col-md-5">
+        <div class="top-spacer" style="width:25em;"></div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row row1">
+    
+    <div class="col-md-5"> 
+      
+      <div class="panel newpanel" style="border-radius: 0px;">
+        <div class="panel-body">
+          
+          
+          
+          <!--/stories-->
+          <div class="row">    
+            <br>
+            <!-- <div class="col-md-3"></div> -->
+            <div class="col-md-12 col-sm-5">
+                <form id="form-main" method="POST" action="/addauthor/add" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name"id="name" placeholder="Name of Author" required >
+                      </div>
+                      <div class="form-group">
+                        <select name="genre" id="genre" class="form-control" required>
+                          <option value="" disabled selected>Select Common Genre of the Author</option>
+                          <option value="Autobiography">Autobiography</option>
+                          <option value="Memoir">Memoir</option>
+                          <option value="Fiction">Fiction</option>
+                          <option value="Thriller">Thriller</option>
+                          <option value="Novel">Novel</option>
+                          <option value="Romance">Romance</option>
+                          <option value="Poetry">Poetry</option>
+                          <option value="Comic">Comic</option>
+                        </select>
+                      </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="book" id="book" placeholder="Famous Books" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="details" id="details" placeholder="Details of the Author" required>
+                    </div>
+                    <div class="form-group">
+                       <input type="url" class="form-control" name="link" id="link" placeholder="Where to Know More (url)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="img">Image of Author</label>
+                        <input name="img" type="file" id="img" accept="image/*" required>
+                    </div>
+                    <br>
+                    <div class="text-center"><button type="submit" class="btn btn-success butn">Add Author</button></div>
+                  </form>
+          
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+	</body>
+</html>
